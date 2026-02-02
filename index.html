@@ -83,24 +83,24 @@
       .btn { padding: 15px 40px; font-size: 1.2rem; }
     }
 
-    /* Top toggle button for Articles */
+    /* Top toggle button for Articles (muted blue) */
     .top-btn {
       position: fixed;
       top: 20px;
       right: 20px;
-      background-color: #ffcc00;
-      color: #000;
+      background-color: rgba(0, 102, 204, 0.7); /* muted blue */
+      color: #fff;
       padding: 10px 20px;
       font-weight: bold;
       border-radius: 8px;
       text-decoration: none;
       z-index: 10;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
     }
     .top-btn:hover {
-      background-color: #ffdb4d;
-      transform: scale(1.05);
+      background-color: rgba(0, 102, 204, 0.85); /* slightly brighter on hover */
+      transform: scale(1.03);
     }
   </style>
 </head>
@@ -170,5 +170,3 @@
 
 </body>
 </html>
-
-
