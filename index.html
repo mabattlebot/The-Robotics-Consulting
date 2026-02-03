@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Robotics Consulting</title>
 
-  <!-- Favicon -->
+  <!-- Favicon for Google & browser -->
   <link rel="icon" href="favicon.png" type="image/png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph / Social Metadata -->
   <meta property="og:title" content="The Robotics Consulting">
   <meta property="og:description" content="Helping VEX IQ teams optimize robot design, programming, and strategy.">
   <meta property="og:image" content="favicon.png">
@@ -30,6 +30,7 @@
       background: radial-gradient(circle at top, #1a2a4f, #0b1224);
     }
 
+    /* Background Image */
     .background-image {
       position: fixed;
       inset: 0;
@@ -64,58 +65,55 @@
       padding: 20px 50px;
       font-size: 1.5rem;
       font-weight: bold;
+      border: none;
       border-radius: 12px;
       cursor: pointer;
-      text-decoration: none;
       transition: all 0.3s ease;
+      text-decoration: none;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
-    .btn:hover {
-      background-color: #ffdb4d;
-      transform: scale(1.05);
-    }
+    .btn:hover { background-color: #ffdb4d; transform: scale(1.05); }
 
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      color: #a9bfff;
-    }
-
-    .top-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: rgba(0, 102, 204, 0.7);
-      color: #fff;
-      padding: 10px 20px;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      z-index: 10;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    .top-btn:hover {
-      background-color: rgba(0, 102, 204, 0.85);
-      transform: scale(1.03);
-    }
+    footer { position: absolute; bottom: 20px; font-size: 0.9rem; color: #a9bfff; }
 
     @media (max-width: 600px) {
       header h1 { font-size: 2rem; }
       header p { font-size: 1rem; }
       .btn { padding: 15px 40px; font-size: 1.2rem; }
     }
+
+    /* Top toggle button for Articles (muted blue) */
+    .top-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(0, 102, 204, 0.7); /* muted blue */
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      z-index: 10;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .top-btn:hover {
+      background-color: rgba(0, 102, 204, 0.85); /* slightly brighter on hover */
+      transform: scale(1.03);
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- Background Image -->
   <div class="background-image"></div>
+
+  <!-- Particles -->
   <canvas id="particles"></canvas>
 
+  <!-- Articles Button -->
   <a href="/articles/" class="top-btn">Articles</a>
 
   <div class="container">
@@ -130,22 +128,14 @@
   </div>
 
   <script>
-    /* ===============================
-       SITE CONFIG (easy to change)
-    ================================ */
-    const SITE_CONFIG = {
-      startRedirect: "https://theroboticsconsulting.base44.app/"
+    // Redirect
+    const redirectLink = "https://theroboticsconsulting.base44.app/";
+    document.getElementById("startButton").onclick = e => {
+      e.preventDefault();
+      window.location.href = redirectLink;
     };
 
-    /* Start button redirect (non-permanent) */
-    document.getElementById("startButton").addEventListener("click", (e) => {
-      e.preventDefault();
-      location.assign(SITE_CONFIG.startRedirect);
-    });
-
-    /* ===============================
-       Particle background
-    ================================ */
+    // Particles
     const canvas = document.getElementById("particles");
     const ctx = canvas.getContext("2d");
 
@@ -170,7 +160,7 @@
         p.y -= p.speed;
         if (p.y < 0) p.y = canvas.height;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
         ctx.fill();
       });
       requestAnimationFrame(animate);
@@ -180,4 +170,3 @@
 
 </body>
 </html>
-
