@@ -63,6 +63,15 @@
     .article-content a:hover { text-decoration: underline; }
     ul { margin-left: 20px; }
 
+    /* ===== IMAGE STYLING ===== */
+    .article-image {
+      display: block;
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 20px auto;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
     footer { text-align: center; margin-top: 60px; font-size: 0.85rem; color: var(--text-muted); }
   </style>
 </head>
@@ -70,50 +79,55 @@
 <body>
   <div class="container">
 
-    <!-- ===== HERO SECTION: EDIT TEXT HERE ===== -->
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero">
       <h1>How to Build a VEX IQ Drivetrain</h1>
       <p>Step-by-step guide for building a fast, stable, and competition-ready VEX IQ drivetrain.</p>
     </section>
 
-    <!-- ===== BREADCRUMBS: EDIT LINKS/TEXT HERE ===== -->
+    <!-- ===== BREADCRUMBS ===== -->
     <nav class="breadcrumbs">
       <a href="/">Home</a> <span>›</span>
       <a href="/articles/">Articles</a> <span>›</span>
       <span>Drivetrain Guide</span>
     </nav>
 
-    <!-- ===== ARTICLE CONTENT: EDIT ALL TEXT HERE ===== -->
+    <!-- ===== ARTICLE CONTENT ===== -->
     <section class="article-content">
-      <p>Building an efficient drivetrain is one of the most important steps in creating a competitive VEX IQ robot. A good drivetrain affects speed, maneuverability, stability, and overall performance.</p>
+      <p>Building a drivetrain is one of the most important and challenging steps in creating a competitive VEX IQ robot. A good drivetrain affects speed, maneuverability, stability, and overall performance.</p>
 
-      <h2>1. Understanding Drivetrain Types</h2>
+      <!-- IMAGE 1 -->
+      <img src="example.png" alt="VEX IQ drivetrain example" class="article-image">
+
+      <h2>1. What to Avoid</h2>
       <ul>
-        <li><strong>Tank Drive:</strong> Each side of the robot is controlled independently. Simple, stable, and easy to program.</li>
-        <li><strong>Mecanum or Omni Wheels:</strong> Allows the robot to move sideways (holonomic drive). Requires precise alignment and more programming skill.</li>
-        <li><strong>H-Drive:</strong> Uses a combination of wheels for omnidirectional movement. Compact but more complex to build.</li>
+        <li><strong>Tank Drive:</strong> Each side of the robot is controlled independently. This type can be too heavy and is not ideal for the VEX IQ Mix and Match game.</li>
+        <li><strong>H-Drive:</strong> Uses a combination of wheels for omnidirectional movement. This design is extremely difficult to build, requires four motors, takes up a lot of space, and is generally not worth it for this game.</li>
       </ul>
 
-      <h2>2. Selecting Wheels and Motors</h2>
+      <h2>2. What to Build</h2>
       <ul>
-        <li>Choose wheels that fit your robot size and game field conditions.</li>
-        <li>Match motors to your drivetrain design. More motors = more torque, but also more weight.</li>
-        <li>Consider gear ratios carefully for speed vs. torque.</li>
+        <li>In my opinion, a 14x16 or 18x20 drivetrain is best for stability and space.</li>
+        <li>Use omniwheels to improve turning ability.</li>
+        <li>Include strategic structural pieces. Keep the robot light by ensuring every piece serves a purpose. Structural pieces should support multiple functions, like holding wheels, rather than just being filler.</li>
       </ul>
+
+      <!-- IMAGE 2 -->
+      <img src="example2.png" alt="VEX IQ drivetrain example 2" class="article-image">
 
       <h2>3. Building Tips</h2>
       <ul>
         <li>Keep your drivetrain symmetrical to ensure straight movement.</li>
         <li>Use structural pieces to strengthen the frame and prevent wobbling.</li>
         <li>Test your drivetrain frequently during construction to catch misalignments early.</li>
-        <li>Plan space for other mechanisms like intakes or lifts to avoid interference.</li>
+        <li>Plan space for other mechanisms, like intakes or lifts, to avoid interference.</li>
       </ul>
 
       <h2>4. Programming and Testing</h2>
       <ul>
         <li>Test your drivetrain in driver control mode first to get a feel for responsiveness.</li>
         <li>Adjust motor speeds and direction as needed for smooth turns.</li>
-        <li>In autonomous, carefully program distances and turns using sensors to improve accuracy.</li>
+        <li>In autonomous mode, carefully program distances and turns using sensors to improve accuracy.</li>
       </ul>
 
       <h2>5. Additional Resources</h2>
@@ -130,5 +144,6 @@
   </div>
 </body>
 </html>
+
 
 
