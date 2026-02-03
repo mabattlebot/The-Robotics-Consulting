@@ -1,86 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Build a VEX IQ Drivetrain | The Robotics Consulting</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h2 {
-            color: #0056b3;
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #0056b3;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        code {
-            background-color: #eee;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-        ul {
-            margin-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Build a VEX IQ Drivetrain | VEX IQ Consulting</title>
+  <meta name="description" content="Step-by-step guide to building a VEX IQ drivetrain for speed, stability, and competition performance.">
+
+  <style>
+    :root {
+      --blue-main: #2563eb;
+      --blue-dark: #1e40af;
+      --bg-light: #f4f7fb;
+      --card-border: #e5e7eb;
+      --text-main: #1f2937;
+      --text-muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--blue-main), var(--blue-dark));
+      color: white;
+      padding: 50px 40px;
+      border-radius: 22px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin: 0 0 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      opacity: 0.95;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -100px;
+      top: -100px;
+      width: 250px;
+      height: 250px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+
+    /* ===== BREADCRUMBS / NAV ===== */
+    .breadcrumbs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+    }
+
+    .breadcrumbs a {
+      text-decoration: none;
+      color: var(--blue-main);
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumbs span {
+      color: var(--text-muted);
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 30px;
+    }
+
+    /* ===== ARTICLE CARD ===== */
+    .article-content {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 8px 26px rgba(0,0,0,0.06);
+    }
+
+    .article-content h2 {
+      color: var(--blue-dark);
+      margin-top: 24px;
+    }
+
+    .article-content a {
+      color: var(--blue-main);
+      text-decoration: none;
+    }
+
+    .article-content a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    code {
+      background-color: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .sidebar h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--blue-dark);
+    }
+
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      color: var(--blue-main);
+      padding: 8px 12px;
+      border-radius: 12px;
+      transition: background 0.2s ease;
+    }
+
+    .sidebar a:hover {
+      background: rgba(37, 99, 235, 0.1);
+    }
+
+    .sidebar .category {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width: 950px){
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .sidebar a {
+        flex: 1 1 calc(50% - 12px);
+      }
+    }
+
+  </style>
 </head>
+
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/articles/">Articles</a>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>How to Build a VEX IQ Drivetrain</h1>
+      <p>Step-by-step guide for building a fast, stable, and competition-ready VEX IQ drivetrain.</p>
+    </section>
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> <span>›</span>
+      <a href="/articles/">Articles</a> <span>›</span>
+      <span>Drivetrain Guide</span>
     </nav>
 
-    <h1>How to Build a VEX IQ Drivetrain</h1>
+    <!-- MAIN LAYOUT -->
+    <div class="main-layout">
 
-    <p>Building an efficient drivetrain is one of the most important steps in creating a competitive VEX IQ robot. A good drivetrain affects speed, maneuverability, stability, and overall performance.</p>
+      <!-- ARTICLE CONTENT -->
+      <section class="article-content">
+        <p>Building an efficient drivetrain is one of the most important steps in creating a competitive VEX IQ robot. A good drivetrain affects speed, maneuverability, stability, and overall performance.</p>
 
-    <h2>1. Understanding Drivetrain Types</h2>
-    <ul>
-        <li><strong>Tank Drive:</strong> Each side of the robot is controlled independently. Simple, stable, and easy to program.</li>
-        <li><strong>Mecanum or Omni Wheels:</strong> Allows the robot to move sideways (holonomic drive). Requires precise alignment and more programming skill.</li>
-        <li><strong>H-Drive:</strong> Uses a combination of wheels for omnidirectional movement. Compact but more complex to build.</li>
-    </ul>
+        <h2>1. Understanding Drivetrain Types</h2>
+        <ul>
+          <li><strong>Tank Drive:</strong> Each side of the robot is controlled independently. Simple, stable, and easy to program.</li>
+          <li><strong>Mecanum or Omni Wheels:</strong> Allows the robot to move sideways (holonomic drive). Requires precise alignment and more programming skill.</li>
+          <li><strong>H-Drive:</strong> Uses a combination of wheels for omnidirectional movement. Compact but more complex to build.</li>
+        </ul>
 
-    <h2>2. Selecting Wheels and Motors</h2>
-    <ul>
-        <li>Choose wheels that fit your robot size and game field conditions.</li>
-        <li>Match motors to your drivetrain design. More motors = more torque, but also more weight.</li>
-        <li>Consider gear ratios carefully for speed vs. torque.</li>
-    </ul>
+        <h2>2. Selecting Wheels and Motors</h2>
+        <ul>
+          <li>Choose wheels that fit your robot size and game field conditions.</li>
+          <li>Match motors to your drivetrain design. More motors = more torque, but also more weight.</li>
+          <li>Consider gear ratios carefully for speed vs. torque.</li>
+        </ul>
 
-    <h2>3. Building Tips</h2>
-    <ul>
-        <li>Keep your drivetrain symmetrical to ensure straight movement.</li>
-        <li>Use structural pieces to strengthen the frame and prevent wobbling.</li>
-        <li>Test your drivetrain frequently during construction to catch misalignments early.</li>
-        <li>Plan space for other mechanisms like intakes or lifts to avoid interference.</li>
-    </ul>
+        <h2>3. Building Tips</h2>
+        <ul>
+          <li>Keep your drivetrain symmetrical to ensure straight movement.</li>
+          <li>Use structural pieces to strengthen the frame and prevent wobbling.</li>
+          <li>Test your drivetrain frequently during construction to catch misalignments early.</li>
+          <li>Plan space for other mechanisms like intakes or lifts to avoid interference.</li>
+        </ul>
 
-    <h2>4. Programming and Testing</h2>
-    <ul>
-        <li>Test your drivetrain in driver control mode first to get a feel for responsiveness.</li>
-        <li>Adjust motor speeds and direction as needed for smooth turns.</li>
-        <li>In autonomous, carefully program distances and turns using sensors to improve accuracy.</li>
-    </ul>
+        <h2>4. Programming and Testing</h2>
+        <ul>
+          <li>Test your drivetrain in driver control mode first to get a feel for responsiveness.</li>
+          <li>Adjust motor speeds and direction as needed for smooth turns.</li>
+          <li>In autonomous, carefully program distances and turns using sensors to improve accuracy.</li>
+        </ul>
 
-    <h2>5. Additional Resources</h2>
-    <ul>
-        <li><a href="https://www.vexrobotics.com/vexiq/robotics" target="_blank">VEX IQ Official Resources</a></li>
-        <li><a href="https://www.roboticseducation.org/" target="_blank">REC Foundation Tutorials</a></li>
-    </ul>
+        <h2>5. Additional Resources</h2>
+        <ul>
+          <li><a href="https://www.vexrobotics.com/vexiq/robotics" target="_blank">VEX IQ Official Resources</a></li>
+          <li><a href="https://www.roboticseducation.org/" target="_blank">REC Foundation Tutorials</a></li>
+        </ul>
 
-    <p>With the right design, careful testing, and incremental improvements, your VEX IQ drivetrain can become the foundation of a strong, competitive robot.</p>
+        <p>With the right design, careful testing, and incremental improvements, your VEX IQ drivetrain can become the foundation of a strong, competitive robot.</p>
+      </section>
 
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div>
+          <div class="category">Related Articles</div>
+          <a href="/articles/intakes/">Designing Efficient VEX IQ Intakes</a>
+          <a href="/articles/programming/">VEX IQ Programming Tips</a>
+          <a href="/articles/match-strategy/">Match Strategy and Tactics</a>
+        </div>
+
+        <div>
+          <div class="category">Categories</div>
+          <a href="/articles/design/">Robot Design</a>
+          <a href="/articles/mechanisms/">Mechanisms</a>
+          <a href="/articles/programming/">Programming</a>
+          <a href="/articles/debugging/">Debugging</a>
+        </div>
+      </aside>
+
+    </div>
+
+    <footer>
+      © 2026 VEX IQ Consulting
+    </footer>
+
+  </div>
 </body>
 </html>
+
