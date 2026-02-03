@@ -4,40 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles | The Robotics Consulting</title>
-    <meta name="description" content="Browse all articles about VEX IQ robot design, drivetrains, mechanisms, programming, and strategy.">
+    <meta name="description" content="Browse expert articles on VEX IQ robot design, drivetrains, mechanisms, programming, and strategy.">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
+            padding: 30px 20px;
+            background: linear-gradient(180deg, #f4f7fb, #ffffff);
+            color: #222;
         }
+
+        header {
+            margin-bottom: 40px;
+        }
+
         h1 {
-            color: #0056b3;
+            font-size: 2.2rem;
+            color: #0b5ed7;
+            margin-bottom: 10px;
         }
-        a {
-            color: #0056b3;
+
+        header p {
+            font-size: 1.05rem;
+            color: #555;
+            max-width: 700px;
+        }
+
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .article-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-card a {
             text-decoration: none;
+            color: #0b5ed7;
+            font-weight: 600;
+            font-size: 1.05rem;
         }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            margin-left: 20px;
+
+        .article-card p {
+            margin-top: 8px;
+            font-size: 0.95rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <h1>All Articles</h1>
-    <p>Welcome! Here’s a list of all the articles we’ve published about VEX IQ robot design, drivetrains, programming, and more.</p>
-    
-    <ul>
-        <li><a href="/articles/drivetrain/">How to Build a VEX IQ Drivetrain</a></li>
-        <!-- Add more articles here -->
-        <li><a href="/articles/intakes/">Designing Efficient VEX IQ Intakes</a></li>
-        <li><a href="/articles/programming/">VEX IQ Programming Tips</a></li>
-    </ul>
+
+    <header>
+        <h1>Articles & Guides</h1>
+        <p>
+            In-depth, competition-tested guides covering VEX IQ robot design,
+            drivetrains, mechanisms, programming, and match strategy.
+        </p>
+    </header>
+
+    <section class="articles">
+        <div class="article-card">
+            <a href="/articles/drivetrain/">How to Build a VEX IQ Drivetrain</a>
+            <p>Learn drivetrain types, gear ratios, and real-world design tips.</p>
+        </div>
+
+        <div class="article-card">
+            <a href="/articles/intakes/">Designing Efficient VEX IQ Intakes</a>
+            <p>Reliable intake designs that actually work on the field.</p>
+        </div>
+
+        <div class="article-card">
+            <a href="/articles/programming/">VEX IQ Programming Tips</a>
+            <p>Cleaner code, faster cycles, and fewer competition bugs.</p>
+        </div>
+    </section>
+
 </body>
 </html>
