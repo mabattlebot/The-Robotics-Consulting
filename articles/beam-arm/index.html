@@ -66,11 +66,11 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      margin: 20px 0;
+      margin: 24px 0;
       justify-content: center;
     }
     .image-row img {
-      max-width: 45%;
+      max-width: 30%;
       border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
@@ -104,8 +104,9 @@
       <p>
         A beam arm is one of the most complex and dependable mechanisms on a VEX IQ robot.
         It is the system that gives the rest of the robot purpose—without it, the robot is
-        limited to basic stacking. A good beam arm must be lightweight, compact, and reliable,
-        while still being powerful enough to lift the heavy cactus onto the standoff.
+        limited to basic stacking. A strong beam arm must be lightweight, compact, and
+        reliable, while still being powerful enough to lift the heavy cactus onto the
+        standoff.
       </p>
 
       <h2>1. What This Mechanism Is</h2>
@@ -126,6 +127,13 @@
         <li>Does not interfere with the 180° mech arm</li>
         <li>Compact but powerful</li>
       </ul>
+
+      <!-- IMAGE ROW -->
+      <div class="image-row">
+        <img src="claw.jpeg" alt="Beam grabbing claw mechanism">
+        <img src="beam.jpeg" alt="Beam arm four bar lift">
+        <img src="gear.jpeg" alt="Beam arm gearbox and motor stacking">
+      </div>
 
       <h2>3. Core Build Overview</h2>
       <ul>
@@ -175,16 +183,9 @@
       <h2>5. Tuning Tips &amp; Common Fixes</h2>
       <ul>
         <li>Keep the beam arm as compact as possible.</li>
-        <li>
-          If more height is needed, first try adjusting the tilt of the arm before extending
-          the four-bar.
-        </li>
-        <li>
-          If the arm struggles to lift the beam, add rubber bands gradually—avoid using too many.
-        </li>
-        <li>
-          Test, tune, and repeat. Consistent tuning is key to reliable performance.
-        </li>
+        <li>If more height is needed, first try adjusting the tilt of the arm.</li>
+        <li>Add rubber bands gradually if extra lifting help is needed.</li>
+        <li>Test, tune, and repeat for consistent performance.</li>
       </ul>
 
       <h2>6. Get Help Tailored to Your Robot</h2>
@@ -201,4 +202,3 @@
   </div>
 </body>
 </html>
-
