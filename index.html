@@ -140,19 +140,9 @@
   <script>
     // Redirect
     const redirectLink = "https://theroboticsconsulting.base44.app/";
-    document.getElementById("startButton").onclick = (e) => {
+    document.getElementById("startButton").onclick = e => {
       e.preventDefault();
-
-      // GA4 event: track Start Now button click
-      gtag("event", "button_click", {
-        button_name: "start_now",
-        page: window.location.pathname
-      });
-
-      // Small delay so GA4 sends the event before redirecting
-      setTimeout(() => {
-        window.location.href = redirectLink;
-      }, 150);
+      window.location.href = redirectLink;
     };
 
     // Particles
@@ -180,7 +170,7 @@
         p.y -= p.speed;
         if (p.y < 0) p.y = canvas.height;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
         ctx.fill();
       });
       requestAnimationFrame(animate);
@@ -190,6 +180,7 @@
 
 </body>
 </html>
+
 
 
 
