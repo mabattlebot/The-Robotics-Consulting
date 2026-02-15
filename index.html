@@ -98,8 +98,7 @@
     .top-btn {
       position: fixed;
       top: 20px;
-      right: 20px;
-      background-color: rgba(0, 102, 204, 0.7); /* muted blue */
+      background-color: rgba(0, 102, 204, 0.7);
       color: #fff;
       padding: 10px 20px;
       font-weight: bold;
@@ -110,8 +109,16 @@
       transition: all 0.3s ease;
     }
     .top-btn:hover {
-      background-color: rgba(0, 102, 204, 0.85); /* slightly brighter on hover */
+      background-color: rgba(0, 102, 204, 0.85);
       transform: scale(1.03);
+    }
+
+    /* Positioning for the 2 top buttons */
+    .top-btn.articles {
+      right: 20px;
+    }
+    .top-btn.learn-more {
+      right: 130px;
     }
   </style>
 </head>
@@ -124,8 +131,9 @@
   <!-- Particles -->
   <canvas id="particles"></canvas>
 
-  <!-- Articles Button -->
-  <a href="/articles/" class="top-btn">Articles</a>
+  <!-- Top Buttons -->
+  <a href="/learn-more/" class="top-btn learn-more">Learn More</a>
+  <a href="/articles/" class="top-btn articles">Articles</a>
 
   <div class="container">
     <header>
