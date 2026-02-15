@@ -1,1 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JCV5XS5F72"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JCV5XS5F72');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn More | The Robotics Consulting</title>
+
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --white: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 8px 22px rgba(0,0,0,0.08);
+      --blue: #2563eb;
+      --blue2: #1d4ed8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* Top nav */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(245,247,251,0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(229,231,235,0.8);
+    }
+
+    .topbar-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .brand img {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .navbtn {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--blue);
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(37,99,235,0.18);
+      background: rgba(37,99,235,0.06);
+      transition: 0.2s;
+    }
+    .navbtn:hover {
+      background: rgba(37,99,235,0.12);
+      transform: translateY(-1px);
+    }
+
+    /* Page wrapper */
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    /* Sections */
+    .section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .icon {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: rgba(37,99,235,0.10);
+      border: 1px solid rgba(37,99,235,0.18);
+      color: var(--blue);
+      flex: 0 0 auto;
+    }
+
+    /* Grid cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* Consultant section */
+    .bio {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .bio p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    /* Topics */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .topic {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .topic strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    .topic span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* CTA */
+    .cta {
+      margin-top: 18px;
+      background: linear-gradient(180deg, var(--blue), var(--blue2));
+      color: #fff;
+      border-radius: 18px;
+      padding: 22px 18px;
+      box-shadow: 0 14px 35px rgba(37,99,235,0.25);
+      border: 1px solid rgba(255,255,255,0.15);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+      font-weight: 900;
+    }
+
+    .cta p {
+      opacity: 0.92;
+      font-size: 0.98rem;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #fff;
+      color: var(--blue2);
+      font-weight: 900;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+      font-size: 1rem;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+    }
+
+    .arrow {
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 820px) {
+      .grid { grid-template-columns: 1fr; }
+      .topics-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">
+        <img src="/favicon.png" alt="The Robotics Consulting">
+        The Robotics Consulting
+      </a>
+
+      <div class="navlinks">
+        <a class="navbtn" href="/">Home</a>
+        <a class="navbtn" href="/articles/">Articles</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <!-- How we help -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">💬</div>
+        How We Help Your Team
+      </div>
+
+      <p style="color: var(--muted); line-height: 1.6; font-size: 0.98rem;">
+        The Robotics Consulting connects your team with personalized guidance on robot design,
+        programming, and competition strategy — built specifically for VEX IQ.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3><span class="icon">❓</span> Ask Questions</h3>
+          <p>
+            Submit questions about your robot design, mechanics, programming, strategy, or troubleshooting.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3><span class="icon">🧠</span> Get Expert Advice</h3>
+          <p>
+            Receive clear, detailed responses from an experienced consultant who understands VEX IQ.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3><span class="icon">⚡</span> Quick Turnaround</h3>
+          <p>
+            Most responses are within 24 hours, so your team can keep improving without waiting.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3><span class="icon">🎥</span> Interactive Support</h3>
+          <p>
+            Upload photos, videos, and code. Get follow-up suggestions to refine your design.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW: What is The Robotics Consulting -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">ℹ️</div>
+        What is The Robotics Consulting
+      </div>
+
+      <p style="font-weight: 800; font-size: 1.05rem; margin-bottom: 10px;">
+        Focused expertise. Proven experience. Real competitive results.
+      </p>
+
+      <div class="bio">
+        <p>
+          At The Robotics Consulting, we see every robot challenge as an opportunity to improve performance and win smarter.
+          Our consultants combine deep VEX IQ competition experience with practical engineering and programming insight
+          to help teams overcome their toughest problems.
+        </p>
+
+        <p>
+          From early design decisions to match-day optimization, we deliver clear, actionable guidance that turns questions
+          into competitive advantages. Whether you're refining a drivetrain, optimizing autonomous code, or preparing for a tournament,
+          our services are built to help your team perform with confidence and consistency.
+        </p>
+
+        <p>
+          Submit a question, and one of our credible robotics consultants will provide expert feedback in under 24 hours —
+          so your team can focus on building, testing, and competing at its best.
+        </p>
+      </div>
+    </div>
+
+    <!-- Founder -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">👤</div>
+        Founder & Lead Consultant
+      </div>
+
+      <div class="bio">
+        <p>
+          I am a 13-year-old VEX IQ competitor with four years of hands-on experience in high-level robotics competitions.
+          Throughout my VEX IQ career, I have qualified for North Carolina State Championships every year and advanced
+          to the VEX IQ World Championship three out of four seasons.
+        </p>
+
+        <p>
+          Along the way, I have earned multiple competition awards, including the Judges Award at Worlds,
+          recognizing not only performance but also engineering process, innovation, and teamwork.
+          Through years of building, programming, competing, and iterating under real tournament pressure,
+          I’ve gained deep insight into robot design, game strategy, programming optimization, and competition readiness.
+        </p>
+
+        <p>
+          I’ve learned an incredible amount through both success and failure — and now I’m excited to share that
+          knowledge with other teams. My goal is to help VEX IQ teams think smarter, build better, and compete with confidence.
+        </p>
+      </div>
+    </div>
+
+    <!-- Topics -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">📌</div>
+        Topics We Cover
+      </div>
+
+      <div class="topics-grid">
+        <div class="topic">
+          <strong>Robot Design</strong>
+          <span>Overall robot architecture, drive train selection, and weight distribution.</span>
+        </div>
+
+        <div class="topic">
+          <strong>Mechanisms</strong>
+          <span>Intakes, lifts, claws, and other specialized systems for game pieces.</span>
+        </div>
+
+        <div class="topic">
+          <strong>Programming</strong>
+          <span>Autonomous routines, sensor usage, and driver control optimization.</span>
+        </div>
+
+        <div class="topic">
+          <strong>Strategy</strong>
+          <span>Match analysis, alliance partner selection, and tournament playbooks.</span>
+        </div>
+
+        <div class="topic">
+          <strong>Match Performance</strong>
+          <span>Analyzing match footage and improving consistency.</span>
+        </div>
+
+        <div class="topic">
+          <strong>Debugging</strong>
+          <span>Troubleshooting technical issues and improving reliability.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Ready to Improve Your Robot?</h2>
+      <p>Submit your first question and get expert guidance within 24 hours.</p>
+      <button id="questionBtn" class="cta-btn">
+        Ready to ask a question? <span class="arrow">→</span>
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    const redirectLink = "https://theroboticsconsulting.base44.app/";
+
+    document.getElementById("questionBtn").onclick = () => {
+      gtag("event", "button_click", {
+        button_name: "ready_to_ask_question",
+        page: window.location.pathname
+      });
+
+      setTimeout(() => {
+        window.location.href = redirectLink;
+      }, 150);
+    };
+  </script>
+
+</body>
+</html>
