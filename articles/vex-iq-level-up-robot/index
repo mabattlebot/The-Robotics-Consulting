@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JCV5XS5F72"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JCV5XS5F72');
+  </script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Level Up Robot Design | The Robotics Consulting</title>
+  <meta name="description" content="A comprehensive guide to building a competitive VEX IQ Level Up robot, featuring CAD and picture access.">
+
+  <style>
+    :root {
+      --blue-main: #2563eb;
+      --blue-dark: #1e40af;
+      --bg-light: #f4f7fb;
+      --card-border: #e5e7eb;
+      --text-main: #1f2937;
+      --text-muted: #6b7280;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--blue-main), var(--blue-dark));
+      color: white;
+      padding: 50px 40px;
+      border-radius: 22px;
+      margin-bottom: 40px;
+    }
+    .hero h1 { margin: 0 0 10px; font-size: 2.4rem; }
+    .hero p { font-size: 1.1rem; max-width: 700px; opacity: 0.95; }
+
+    .breadcrumbs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+    }
+    .breadcrumbs a { text-decoration: none; color: var(--blue-main); }
+    .breadcrumbs span { color: var(--text-muted); }
+
+    .article-content {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 8px 26px rgba(0,0,0,0.06);
+    }
+    .article-content h2 {
+      color: var(--blue-dark);
+      margin-top: 28px;
+    }
+    ul { margin-left: 20px; }
+
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+      justify-content: center;
+    }
+    .image-row img {
+      max-width: 45%;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 768px) {
+      .image-row img { max-width: 100%; }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <section class="hero">
+      <h1>Full Level Up Robot Design (With Instructions)</h1>
+      <p>A comprehensive design guide and instructions for building a highly competitive VEX IQ robot for the Level Up season.</p>
+    </section>
+
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> <span>›</span>
+      <a href="/articles/">Articles</a> <span>›</span>
+      <span>Level Up Robot Design</span>
+    </nav>
+
+    <section class="article-content">
+      <h2>Do You What This Robot</h2>
+      <p>
+        You can access the <strong>CAD and pictures</strong> of this amazing robot by going to <a href="http://theroboticsconsulting.com" target="_blank">theroboticsconsulting.com</a> and asking for it by pressing start now and then submitting a question. I will then <strong>personally send you the cad link and pictures.</strong>
+      </p>
+
+      <h2>What Is VEX IQ Level Up?</h2>
+      <p>
+        Level Up is the newest VEX IQ competition game. This season is all about being fast and transferring the bean bags quickly, due to the 1 bean bag possession limit.
+      </p>
+      <p>
+        In my opinion I would build a robot to get all the bean bags close to the pyramid as quickly as possible so you have to do the least amount of driving back and forth.
+      </p>
+
+      <h2>1. The New Meta</h2>
+      <p>The top robots this season will probably focus on:</p>
+      <ul>
+        <li>Fast Drivetrains</li>
+        <li><strong>A quick way to transfer the bean bags</strong> without driving too much <strong>(catapult)</strong></li>
+        <li>Efficient field movement</li>
+        <li><strong>Long fast arm</strong> to get to the high spots and the top of the pyramid</li>
+        <li>Strong autonomous routines</li>
+        <li><strong>Short robot to get under the bars</strong></li>
+        <li>Consistent driver control</li>
+      </ul>
+      <p>
+        After you get all the bean bags close to the pyramid, you need an arm to pick them up and put them on the pyramid, or like an intake so it goes in like a circle and makes it all the way up.
+      </p>
+
+      <h2>2. What design should YOU build</h2>
+      <p>
+        Enough yapping, let's get right into it. This is my personal opinion on what YOU should build this season.
+      </p>
+
+      <div class="image-row">
+        <img src="YOUR-IMAGE-HERE.jpg" alt="Level Up Robot Design Overview">
+      </div>
+
+      <ul>
+        <li>This is a fast 2 motor 1:2 ratio <strong>drivetrain that is small, compact, and speedy</strong>.</li>
+        <li>The catapult uses a ratchet system, instead of the traditional choo choo mech, so that it can adjust the release angle, allowing you to score into <strong>Level 3 consistently</strong>.</li>
+        <li>The intake uses a tank tread link wrapped around a 40 tooth sprocket to quickly and consistently <strong>intake the bean bags without any problems</strong>.</li>
+      </ul>
+
+      <h2>3. Drivetrain</h2>
+
+      <div class="image-row">
+        <img src="YOUR-IMAGE-HERE.jpg" alt="Drivetrain Design">
+      </div>
+
+      <p>
+        The <strong>Drivetrain is one of the most important parts of the robot</strong>, if you don't have a strong, reliable drivetrain, your bot will drift, and just have bad build quality.
+      </p>
+
+      <h2>4. Catapult</h2>
+
+      <div class="image-row">
+        <img src="YOUR-IMAGE-HERE-1.jpg" alt="Catapult Mechanism 1">
+        <img src="YOUR-IMAGE-HERE-2.jpg" alt="Catapult Mechanism 2">
+      </div>
+
+      <p>
+        The <strong>catapult is all about tuning</strong>, I found making the catapult support piece a 2x16 beam, it does not go under the bar, but it makes the shots very consistent.
+      </p>
+
+      <h2>5. Intake</h2>
+      <p>
+        Finally we have the intake, <strong>THE HARDEST PART</strong> in my opinion as it needs lots of tunning, even more then the catapult.
+      </p>
+
+      <div class="image-row">
+        <img src="YOUR-IMAGE-HERE.jpg" alt="Intake System">
+      </div>
+
+      <p>
+        I used a 2 motor 1:2 ratio for this intake ensuring speed, while keeping power. I also used a plastic PET sheet on the bag to <strong>make sure the bean bags go into the catapult smoothly.</strong>
+      </p>
+
+      <h2>Get This Robot</h2>
+      <p>
+        Make Sure To Go To <a href="http://theroboticsconsulting.com" target="_blank">theroboticsconsulting.com</a> to get <strong>this Robot for Free.</strong> Just ask!!!
+      </p>
+      
+    </section>
+
+  </div>
+</body>
+</html>
