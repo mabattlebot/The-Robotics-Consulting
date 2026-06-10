@@ -145,7 +145,7 @@
       </p>
 
       <div class="image-row">
-        <img src="YOUR-IMAGE-HERE.jpg" alt="Level Up Robot Design Overview">
+        <img src="level-up-robot.png" alt="Level Up Robot Design Overview">
       </div>
 
       <ul>
@@ -157,7 +157,7 @@
       <h2>3. Drivetrain</h2>
 
       <div class="image-row">
-        <img src="YOUR-IMAGE-HERE.jpg" alt="Drivetrain Design">
+        <img src="drivetrain.png" alt="Drivetrain Design">
       </div>
 
       <p>
@@ -167,8 +167,8 @@
       <h2>4. Catapult</h2>
 
       <div class="image-row">
-        <img src="YOUR-IMAGE-HERE-1.jpg" alt="Catapult Mechanism 1">
-        <img src="YOUR-IMAGE-HERE-2.jpg" alt="Catapult Mechanism 2">
+        <img src="catapult1.png" alt="Catapult Mechanism 1">
+        <img src="catapult2.png" alt="Catapult Mechanism 2">
       </div>
 
       <p>
@@ -181,7 +181,7 @@
       </p>
 
       <div class="image-row">
-        <img src="YOUR-IMAGE-HERE.jpg" alt="Intake System">
+        <img src="intake.png" alt="Intake System">
       </div>
 
       <p>
